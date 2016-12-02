@@ -1,7 +1,7 @@
 # Woocommerce-Cart-Maximum-Items
 This is the official repository for for the plugin  Woocommerce Cart Maximum Items. 
 
-This plugin enables the user to enter a limit of allowed products/items which can be added by a use when using Woocommerce! 
+This simple plugin enables the user to set a limit on allowed products/items which can be added by a user when using Woocommerce! 
 
 
 # Prerequisites 
