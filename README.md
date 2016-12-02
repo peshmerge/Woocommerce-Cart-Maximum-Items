@@ -5,5 +5,5 @@ This plugin enables the user to enter a limit of allowed products/items which ca
 
 
 # Prerequisites 
-Woocommerce 2.1 or higer
+Woocommerce 2.1 or higer <br>
 Wordpress 4.1 or higer
