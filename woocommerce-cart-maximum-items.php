@@ -39,7 +39,7 @@ function show_woocommerce_cart_maximum_items_options()
     //Check the sent values from the form
     if (isset($_POST['woo_cart_max'])) {
         //Update the options in the database
-        update_option('woo_cart_max_amount', (intval)($_POST['woo_cart_max_amount'] != '')
+        update_option('woo_cart_max_amount', (int)($_POST['woo_cart_max_amount'] != '')
             ? $_POST['woo_cart_max_amount'] : 0);
         update_option('woo_cart_max_amount_message', (string)($_POST['woo_cart_max_amount_message'] != '')
             ? $_POST['woo_cart_max_amount_message'] : 'You are not allowed to add more products');
@@ -126,10 +126,10 @@ function woocommerce_cart_maximum_items_options_options_page()
  */
 function validation_function($passed, $product_id, $quantity, $variation_id = '', $variations = '')
 {
-    $amount = (intval)(get_option('woo_cart_max_amount'));
+    $amount = (int)(get_option('woo_cart_max_amount'));
     $message = get_option('woo_cart_max_amount_message');
     if ($amount > 0) {
-        if (WC()->cart->get_cart_contents_count() >= intval($amount)) {
+        if (WC()->cart->get_cart_contents_count() >= (int)($amount)) {
             $passed = false;
             wc_add_notice(__(htmlspecialchars($message), 'baran-it'), 'error');
         }
